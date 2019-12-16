@@ -52,7 +52,7 @@
       "title": "New task 6",
       "creationDate": "2019-07-27T15:58:17.476Z",
       "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur velit sapien, tristique eu tellus vel, ultrices aliquet urna. Proin commodo tristique turpis, dapibus rhoncus nisl tincidunt id. Proin interdum feugiat ante a efficitur. Donec et vestibulum nisi. Etiam libero sem, pretium ac molestie aliquet, venenatis eget justo.",
-      "status": "todo",
+      "status": "inprogress",
       "dueDate": null
     },
     {
@@ -60,7 +60,7 @@
       "title": "New task 7",
       "creationDate": "2019-11-07T15:58:56.925Z",
       "description": "Curabitur sit amet leo at purus fringilla fermentum in maximus lectus. Maecenas vel justo metus. Ut condimentum eros sapien, placerat mollis lectus consequat ut.",
-      "status": "inprogress",
+      "status": "todo",
       "dueDate": "2026-01-05T23:00:00.000Z"
     }
   ]

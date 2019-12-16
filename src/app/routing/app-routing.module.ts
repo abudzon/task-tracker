@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TasksComponent } from '../tasks/tasks.component';
 
-const ROUTES = [
+export const ROUTES = [
   {
     path: '',
     component: TasksComponent

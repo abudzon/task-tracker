@@ -11,7 +11,7 @@ Steps to run the Task Tracker application:
 
 ## Annotation:
 Mock data are placed outside `src` folder for purpose, because Angular-CLI is listening on every file change within this folder. Simultaneously,
-JSON-Server is updating `mock-tasks.json` file whenever user interact with Tasks. In order to prevent page from reloading, `mocks` folder has been moved outside `src`.  
+JSON-Server is updating `mock-tasks.json` file, whenever user interacts with tasks. In order to prevent page from reloading, `mocks` folder has been moved outside `src`.  
  
 ## Build
 

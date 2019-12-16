@@ -1,0 +1,20 @@
+.success-notification {
+  background: #20ac4f;
+  color: white;
+  font-weight: bold;
+}
+
+.error-notification {
+  background: #b5423c;
+  color: white;
+  font-weight: bold;
+}
+
+.mat-dialog-container {
+  border-top: 8px solid #00E676;
+  background-color: #303030;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0,0,0,0.6);
+}

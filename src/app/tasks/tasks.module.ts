@@ -4,11 +4,11 @@ import { TasksBoardComponent } from './tasks-board/tasks-board.component';
 import { TaskCardComponent } from './task-card/task-card.component';
 import { TaskCreateComponent } from './task-create/task-create.component';
 import { TasksComponent } from './tasks.component';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailsComponent } from './task-details/task-details.component';
 import { SharedModule } from '../shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const components = [
   TasksBoardComponent,
@@ -25,8 +25,8 @@ const components = [
   imports: [
     CommonModule,
     MaterialModule,
-    DragDropModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     SharedModule
   ],
   exports: [

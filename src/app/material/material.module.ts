@@ -16,6 +16,7 @@ import {
   MatNativeDateModule,
   MatProgressSpinnerModule,
 } from '@angular/material';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const modules = [
   MatCardModule,
@@ -31,7 +32,8 @@ const modules = [
   MatSidenavModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  DragDropModule,
 ];
 
 @NgModule({

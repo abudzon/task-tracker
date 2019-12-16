@@ -23,7 +23,6 @@ import { MAT_DATE_LOCALE } from '@angular/material';
     TasksModule,
     MaterialModule,
     AppRoutingModule,
-    SharedModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},

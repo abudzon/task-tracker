@@ -1,5 +1,7 @@
 @import '@angular/material/prebuilt-themes/purple-green.css';
 
+@import 'assets/scss/_global.scss';
+
 html, body { 
   height: 100%; 
 }
@@ -11,25 +13,4 @@ body {
   margin: 0;
   background-color: #ededed;
   font-family: Roboto, "Helvetica Neue", sans-serif; 
-}
-
-.success-notification {
-  background: #20ac4f;
-  color: white;
-  font-weight: bold;
-}
-
-.error-notification {
-  background: #b5423c;
-  color: white;
-  font-weight: bold;
-}
-
-.mat-dialog-container {
-  border-top: 8px solid #00E676;
-  background-color: #303030;
-}
-
-.cdk-overlay-dark-backdrop {
-  background: rgba(0,0,0,0.6);
 }
