@@ -1,6 +1,7 @@
-<div class="task-drawer-container">
+<div *ngIf="task"
+     class="task-drawer-container">
   <div class="task-drawer-header">
-      <h2 class="task-title">{{ task.title }}</h2>
+    <h2 class="task-title">{{ task.title }}</h2>
     <button mat-icon-button
             aria-label="Close"
             class="task-drawer-close"
@@ -24,7 +25,8 @@
     </span>
 
     <span class="task-content-tag">Status:
-      <span class="task-status-flag" [ngClass]="task.status">{{ task.status | status }}</span>
+      <span class="task-status-flag"
+            [ngClass]="task.status">{{ task.status | status }}</span>
     </span>
 
     <span class="task-content-tag">Description:</span>

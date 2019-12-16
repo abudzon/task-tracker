@@ -14,11 +14,15 @@ body {
 }
 
 .success-notification {
-  background: #24df5f;
+  background: #20ac4f;
+  color: white;
+  font-weight: bold;
 }
 
 .error-notification {
-  background: #ff4f4a;
+  background: #b5423c;
+  color: white;
+  font-weight: bold;
 }
 
 .mat-dialog-container {

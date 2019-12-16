@@ -46,13 +46,11 @@ export class TasksComponent implements OnInit, OnDestroy {
     const getTasksSub = this.taskService.getGroupedTasks()
       .subscribe((taskGroups: TasksResponse) => {
         this.setCategorisedTasks(taskGroups);
-        this.loading = false;
       }, (error) => {
-        this.loading = false;
         this.notificationService.openErrorNotification(
           `Failed to retrieve tasks: ${ error.message }.`
         );
-      });
+      }, () => this.loading = false);
     this.subscriptions.add(getTasksSub);
   }
 
@@ -72,7 +70,11 @@ export class TasksComponent implements OnInit, OnDestroy {
       .subscribe((task: Task) => {
         const tasksOfSameStatus = task.status === TaskStatus.TO_DO ? this.toDo :
           (task.status === TaskStatus.IN_PROGRESS ? this.inProgress : this.done);
-        tasksOfSameStatus.splice(tasksOfSameStatus.indexOf(task), 1);
+        const taskToDelete = tasksOfSameStatus.findIndex((item: Task) => item.id === task.id);
+
+        if (taskToDelete) {
+          tasksOfSameStatus.splice(taskToDelete, 1);
+        }
       });
     this.subscriptions.add(deletedSub);
   }
@@ -81,8 +83,8 @@ export class TasksComponent implements OnInit, OnDestroy {
     const viewDetails = this.taskService.taskDetails$
       .subscribe((task: Task) => {
         if (task) {
-          this.taskDrawer.open();
           this.drawerTask = task;
+          this.taskDrawer.open();
         }
       });
     this.subscriptions.add(viewDetails);

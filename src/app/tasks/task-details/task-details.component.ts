@@ -35,8 +35,8 @@ export class TaskDetailsComponent {
       .subscribe((result: boolean) => {
         if (result) {
           this.drawer.close();
-          this.task = undefined;
           this.taskService.initiateDeleteTask(this.task);
+          this.task = undefined;
         }
       });
   }

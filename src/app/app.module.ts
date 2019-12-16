@@ -26,7 +26,7 @@ import { MAT_DATE_LOCALE } from '@angular/material';
     SharedModule
   ],
   providers: [
-    {provide: MAT_DATE_LOCALE, useValue: 'pl-PL'},
+    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
   ],
   bootstrap: [AppComponent]
 })

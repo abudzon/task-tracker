@@ -1,61 +1,67 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "title": "Task 1",
-      "creationDate": "May 13, 2016, 07:01 PM",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tortor risus, eleifend id lobortis ut, mattis quis lectus. Etiam vulputate lacus venenatis, tincidunt odio ac, convallis odio. Donec rhoncus consectetur ipsum, vel tincidunt sem consectetur et.",
-      "status": "inprogress"
-    },
-    {
-      "id": "2",
-      "title": "Task 2",
-      "creationDate": "December 1, 2017, 04:02 PM",
-      "description": "Fusce porta ante eu gravida accumsan. Duis rhoncus libero vitae sem volutpat, ac euismod erat luctus. Nullam ac bibendum justo. Phasellus porta dolor lectus, vitae facilisis quam pellentesque non.",
-      "status": "inprogress"
-    },
-    {
-      "id": "3",
-      "title": "Task 3",
-      "creationDate": "November 1, 2019, 02:19 PM",
-      "description": "Proin elit sem, accumsan vel semper a, pharetra quis eros. Praesent vel vestibulum lectus. Fusce venenatis elementum ante. Praesent posuere purus aliquam, fringilla tortor eget, mattis massa. Aliquam luctus justo est, sed tempor ipsum sodales ac.",
-      "status": "todo"
-    },
-    {
-      "id": "4",
-      "title": "Task 4",
-      "creationDate": "January 9, 2017, 11:37 PM",
-      "description": "Suspendisse et arcu non mi blandit scelerisque. Donec tristique sodales est et feugiat. Phasellus faucibus eros enim, eu varius nibh elementum tempor. Pellentesque et ullamcorper libero. Nullam vel massa in arcu imperdiet elementum. Quisque consequat vitae velit ac scelerisque. ",
-      "status": "inprogress"
-    },
-    {
-      "id": "5",
-      "title": "Task 5",
-      "creationDate": "April 28, 2018, 11:18 AM",
-      "description": "In dapibus viverra urna, id luctus diam. In hac habitasse platea dictumst. Aenean diam nisi, euismod quis vulputate eget, mattis ut eros. Aenean ullamcorper nec felis sed placerat. Suspendisse ex purus, suscipit nec ex a, aliquam rutrum sapien. Aliquam suscipit, purus sed semper egestas, neque lacus laoreet enim, et pretium augue nulla quis est.",
-      "status": "todo"
-    },
-    {
-      "id": "6",
-      "title": "Task 6",
-      "creationDate": "September 18, 2018, 10:29 AM",
-      "description": " Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur velit sapien, tristique eu tellus vel, ultrices aliquet urna. Proin commodo tristique turpis, dapibus rhoncus nisl tincidunt id. Proin interdum feugiat ante a efficitur. Donec et vestibulum nisi. Etiam libero sem, pretium ac molestie aliquet, venenatis eget justo.",
-      "status": "todo"
-    },
-    {
-      "id": "7",
+      "id": "7a51582a-597a-4163-9835-35c300f8fcb4",
       "title": "Very long long long long long long long long long task title",
-      "creationDate": "June 14, 2017, 10:11 AM",
+      "creationDate": "2017-10-06T10:50:32.870Z",
       "description": "Curabitur sit amet leo at purus fringilla fermentum in maximus lectus. Maecenas vel justo metus. Ut condimentum eros sapien, placerat mollis lectus consequat ut.",
       "status": "done"
     },
     {
-      "id": "764eeb64-e30e-48ba-bf95-a59d34b1082f",
-      "title": "New task with due date",
-      "creationDate": "2019-12-16T09:55:12.744Z",
-      "description": "New task with due date and a little bit long text. But probably not that long. Just long enough.",
-      "status": "done",
+      "id": "bfc2d78c-eabc-44d2-89fa-8ae039dd136e",
+      "title": "New task 1",
+      "creationDate": "2019-12-16T15:11:32.870Z",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tortor risus, eleifend id lobortis ut, mattis quis lectus. Etiam vulputate lacus venenatis, tincidunt odio ac, convallis odio. Donec rhoncus consectetur ipsum, vel tincidunt sem consectetur et.",
+      "status": "todo",
+      "dueDate": "2019-12-21T23:00:00.000Z"
+    },
+    {
+      "id": "8503d572-4631-4e39-83d9-ca2d33cd6ab0",
+      "title": "New task 2",
+      "creationDate": "2019-12-16T15:56:03.814Z",
+      "description": "Fusce porta ante eu gravida accumsan. Duis rhoncus libero vitae sem volutpat, ac euismod erat luctus. Nullam ac bibendum justo. Phasellus porta dolor lectus, vitae facilisis quam pellentesque non.",
+      "status": "inprogress",
       "dueDate": "2019-12-30T23:00:00.000Z"
+    },
+    {
+      "id": "5eb51ae8-29fb-4876-b269-9e545bf7e010",
+      "title": "New task 3",
+      "creationDate": "2019-12-16T18:56:31.517Z",
+      "description": "Proin elit sem, accumsan vel semper a, pharetra quis eros. Praesent vel vestibulum lectus. Fusce venenatis elementum ante. Praesent posuere purus aliquam, fringilla tortor eget, mattis massa. Aliquam luctus justo est, sed tempor ipsum sodales ac.",
+      "status": "inprogress",
+      "dueDate": "2020-02-28T23:00:00.000Z"
+    },
+    {
+      "id": "cbc6bb2c-cc04-44c1-9743-fcf5a22ee60a",
+      "title": "New task 4",
+      "creationDate": "2019-12-15T10:56:53.789Z",
+      "description": "Suspendisse et arcu non mi blandit scelerisque. Donec tristique sodales est et feugiat. Phasellus faucibus eros enim, eu varius nibh elementum tempor. Pellentesque et ullamcorper libero. Nullam vel massa in arcu imperdiet elementum. Quisque consequat vitae velit ac scelerisque.",
+      "status": "todo",
+      "dueDate": null
+    },
+    {
+      "id": "6ee209cc-e5e4-488a-aefc-95e7eae5114c",
+      "title": "New task 5",
+      "creationDate": "2019-09-09T07:57:45.629Z",
+      "description": "In dapibus viverra urna, id luctus diam. In hac habitasse platea dictumst. Aenean diam nisi, euismod quis vulputate eget, mattis ut eros. Aenean ullamcorper nec felis sed placerat. Suspendisse ex purus, suscipit nec ex a, aliquam rutrum sapien. Aliquam suscipit, purus sed semper egestas, neque lacus laoreet enim, et pretium augue nulla quis est.",
+      "status": "done",
+      "dueDate": "2019-12-19T23:00:00.000Z"
+    },
+    {
+      "id": "a9c5a9dc-cfd9-4348-a703-a3b2bf64b46e",
+      "title": "New task 6",
+      "creationDate": "2019-07-27T15:58:17.476Z",
+      "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur velit sapien, tristique eu tellus vel, ultrices aliquet urna. Proin commodo tristique turpis, dapibus rhoncus nisl tincidunt id. Proin interdum feugiat ante a efficitur. Donec et vestibulum nisi. Etiam libero sem, pretium ac molestie aliquet, venenatis eget justo.",
+      "status": "todo",
+      "dueDate": null
+    },
+    {
+      "id": "1b1b1d64-1298-481c-b7a8-2100780b174e",
+      "title": "New task 7",
+      "creationDate": "2019-11-07T15:58:56.925Z",
+      "description": "Curabitur sit amet leo at purus fringilla fermentum in maximus lectus. Maecenas vel justo metus. Ut condimentum eros sapien, placerat mollis lectus consequat ut.",
+      "status": "inprogress",
+      "dueDate": "2026-01-05T23:00:00.000Z"
     }
   ]
 }

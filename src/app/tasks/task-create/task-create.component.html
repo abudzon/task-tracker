@@ -10,7 +10,9 @@
                required
                formControlName="title"
                placeholder="Title">
-        <mat-error *ngIf="tasksFormGroup.controls.title.invalid">Please fill in the field.</mat-error>
+        <mat-error *ngIf="tasksFormGroup.controls.title.invalid">
+          Please fill in the field.
+        </mat-error>
       </mat-form-field>
       <mat-form-field color="accent"
                       appearance="outline">
@@ -19,7 +21,9 @@
                   required
                   formControlName="description"
                   placeholder="Description"></textarea>
-        <mat-error *ngIf="tasksFormGroup.controls.description.invalid">Please fill in the field.</mat-error>
+        <mat-error *ngIf="tasksFormGroup.controls.description.invalid">
+          Please fill in the field.
+        </mat-error>
       </mat-form-field>
       <mat-form-field color="accent"
                       appearance="outline">
@@ -31,8 +35,12 @@
         <mat-datepicker-toggle matSuffix
                                [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-        <mat-error *ngIf="tasksFormGroup.controls.dueDate.errors?.pastDate">{{ tasksFormGroup.controls.dueDate['errors'].pastDate}}</mat-error>
-        <mat-error *ngIf="tasksFormGroup.controls.dueDate.errors?.matDatepickerParse">Please provide valid date.</mat-error>
+        <mat-error *ngIf="tasksFormGroup.controls.dueDate.errors?.pastDate">
+          {{ tasksFormGroup.controls.dueDate['errors'].pastDate }}
+        </mat-error>
+        <mat-error *ngIf="tasksFormGroup.controls.dueDate.errors?.matDatepickerParse">
+          Please provide valid date.
+        </mat-error>
       </mat-form-field>
       <mat-form-field color="accent"
                       appearance="outline">
@@ -44,7 +52,9 @@
             {{status.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="tasksFormGroup.controls.status.invalid">Please fill in the field.</mat-error>
+        <mat-error *ngIf="tasksFormGroup.controls.status.invalid">
+          Please fill in the field.
+        </mat-error>
       </mat-form-field>
     </form>
   </div>
