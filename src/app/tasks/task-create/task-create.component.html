@@ -1,0 +1,65 @@
+<div class="task-create-container">
+  <h1 mat-dialog-title>Create new task</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="tasksFormGroup"
+          class="task-create-form">
+      <mat-form-field color="accent"
+                      appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput
+               required
+               formControlName="title"
+               placeholder="Title">
+        <mat-error *ngIf="tasksFormGroup.controls.title.invalid">Please fill in the field.</mat-error>
+      </mat-form-field>
+      <mat-form-field color="accent"
+                      appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput
+                  required
+                  formControlName="description"
+                  placeholder="Description"></textarea>
+        <mat-error *ngIf="tasksFormGroup.controls.description.invalid">Please fill in the field.</mat-error>
+      </mat-form-field>
+      <mat-form-field color="accent"
+                      appearance="outline">
+        <mat-label>Due date</mat-label>
+        <input matInput
+               formControlName="dueDate"
+               [matDatepicker]="picker"
+               placeholder="Due date"/>
+        <mat-datepicker-toggle matSuffix
+                               [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="tasksFormGroup.controls.dueDate.errors?.pastDate">{{ tasksFormGroup.controls.dueDate['errors'].pastDate}}</mat-error>
+        <mat-error *ngIf="tasksFormGroup.controls.dueDate.errors?.matDatepickerParse">Please provide valid date.</mat-error>
+      </mat-form-field>
+      <mat-form-field color="accent"
+                      appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status"
+                    [placeholder]="">
+          <mat-option *ngFor="let status of statuses"
+                      [value]="status.value">
+            {{status.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="tasksFormGroup.controls.status.invalid">Please fill in the field.</mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div class="task-create-action-buttons"
+       mat-dialog-actions>
+    <button mat-button
+            mat-raised-button
+            color="accent"
+            [disabled]="tasksFormGroup.invalid"
+            (click)="submitTask()">Submit
+    </button>
+    <button mat-button
+            mat-raised-button
+            mat-dialog-close>Cancel
+    </button>
+  </div>
+</div>

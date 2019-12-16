@@ -1,0 +1,27 @@
+.mat-drawer-container {
+  background-color: #ededed;
+  color: #303030;
+  height: 100%;
+}
+
+.mat-drawer-container .mat-drawer {
+  background-color: white;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 64px;
+  left: 0;
+  overflow: auto;
+}
+
+.no-tasks-available {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mat-card {
+    width: 600px;
+    height: 400px;
+    text-align: center;
+  }
+}

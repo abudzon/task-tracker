@@ -1,0 +1,12 @@
+.navigation-toolbar-container {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+
+  .task-tracker-toolbar-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}

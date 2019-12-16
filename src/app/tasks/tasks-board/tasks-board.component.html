@@ -1,0 +1,66 @@
+<div cdkDropListGroup
+     class="tasks-board-container">
+  <div class="tasks-group-container">
+    <h2>To do</h2>
+
+    <div
+      cdkDropList
+      class="tasks-list"
+      id="to-do-tasks"
+      [cdkDropListData]="toDoTasks"
+      (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let task of toDoTasks"
+           class="task-item"
+           id="{{task.id}}"
+           cdkDrag>
+        <app-task-card *ngIf="task"
+                       [task]="task">
+        </app-task-card>
+      </div>
+    </div>
+  </div>
+
+  <mat-divider [vertical]="true" class="tasks-board-divider"></mat-divider>
+
+  <div class="tasks-group-container">
+    <h2>In progress</h2>
+
+    <div
+      cdkDropList
+      class="tasks-list"
+      id="in-progress-tasks"
+      [cdkDropListData]="inProgressTasks"
+      (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let task of inProgressTasks"
+           class="task-item"
+           id="{{task.id}}"
+           cdkDrag>
+        <app-task-card *ngIf="task"
+                       [task]="task">
+        </app-task-card>
+      </div>
+    </div>
+  </div>
+
+  <mat-divider [vertical]="true" class="tasks-board-divider"></mat-divider>
+
+  <div class="tasks-group-container">
+    <h2>Done</h2>
+
+    <div
+      cdkDropList
+      class="tasks-list"
+      id="done-tasks"
+      [cdkDropListData]="doneTasks"
+      (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let task of doneTasks"
+           class="task-item"
+           id="{{task.id}}"
+           cdkDrag>
+        <app-task-card *ngIf="task"
+                       [task]="task">
+        </app-task-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+.task-container {
+  padding: 20px 10px;
+  border-top: 8px solid #00E676;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  cursor: move;
+  font-size: 14px;
+  margin-bottom: 4px;
+  height: 210px;
+  max-height: 210px;
+  min-width: 364px;
+  max-width: 600px;
+
+  .mat-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .task-view-more {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 16px;
+  }
+
+  .task-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 500px;
+  }
+
+  .task-date {
+    color: #969696;
+  }
+
+  .task-description {
+    margin: 0 16px;
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}

@@ -1,0 +1,43 @@
+<div class="task-drawer-container">
+  <div class="task-drawer-header">
+      <h2 class="task-title">{{ task.title }}</h2>
+    <button mat-icon-button
+            aria-label="Close"
+            class="task-drawer-close"
+            (click)="closeDrawer()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="task-drawer-content">
+    <span class="task-content-tag task-date-tag">
+      Creation date:
+      <span class="task-date">{{ task.creationDate | date:'MMMM d, y, h:mm a' }}</span>
+    </span>
+
+    <span *ngIf="task.dueDate"
+          class="task-content-tag task-date-tag">
+      Due date:
+      <span class="task-date">{{ task.dueDate | date:'MMMM d, y, h:mm a' }}</span>
+    </span>
+
+    <span class="task-content-tag">Status:
+      <span class="task-status-flag" [ngClass]="task.status">{{ task.status | status }}</span>
+    </span>
+
+    <span class="task-content-tag">Description:</span>
+    <p class="task-description">
+      {{ task.description }}
+    </p>
+  </div>
+  <div class="task-delete">
+    <button mat-button
+            mat-raised-button
+            color="warn"
+            (click)="deleteTask()">
+      Delete
+    </button>
+  </div>
+</div>

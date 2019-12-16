@@ -1,0 +1,22 @@
+<mat-drawer-container>
+  <mat-drawer #drawer
+              mode="side">
+    <app-task-details *ngIf="drawerTask"
+                       [task]="drawerTask"
+                       [drawer]="drawer">
+    </app-task-details>
+  </mat-drawer>
+
+  <app-tasks-board *ngIf="toDo && inProgress && done &&
+                      (toDo.length || inProgress.length || done.length); else noData"
+                   [(toDoTasks)]="toDo"
+                   [(inProgressTasks)]="inProgress"
+                   [(doneTasks)]="done"
+                   (statusChange)="updateTaskStatus($event)">
+  </app-tasks-board>
+  <ng-template #noData>
+    <div class="no-tasks-available">
+      <h2>No tasks available.</h2>
+    </div>
+  </ng-template>
+</mat-drawer-container>

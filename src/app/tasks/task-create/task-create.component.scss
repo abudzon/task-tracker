@@ -1,0 +1,17 @@
+.task-create-container {
+  .task-create-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  textarea.mat-input-element {
+    resize: none;
+    min-height: 60px;
+  }
+
+  .task-create-action-buttons {
+    justify-content: flex-end;
+    margin-bottom: 1px;
+    padding: 0;
+  }
+}
