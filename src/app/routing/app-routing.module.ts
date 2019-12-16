@@ -23,5 +23,4 @@ const ROUTES = [
     RouterModule
   ]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

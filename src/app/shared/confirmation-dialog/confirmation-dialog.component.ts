@@ -9,6 +9,5 @@ import { ConfirmationDialogData } from '../model/confirmation-dialog-data.interf
 })
 export class ConfirmationDialogComponent {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: ConfirmationDialogData) { }
-
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ConfirmationDialogData) {}
 }

@@ -14,6 +14,7 @@ import {
   MatSidenavModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatProgressSpinnerModule,
 } from '@angular/material';
 
 const modules = [
@@ -29,7 +30,8 @@ const modules = [
   MatIconModule,
   MatSidenavModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

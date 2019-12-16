@@ -5,7 +5,7 @@ import { TaskService } from '../../service/task.service';
 @Component({
   selector: 'app-task-card',
   templateUrl: './task-card.component.html',
-  styleUrls: ['./task-card.component.scss']
+  styleUrls: [ './task-card.component.scss' ]
 })
 export class TaskCardComponent {
 
@@ -14,6 +14,6 @@ export class TaskCardComponent {
   constructor(private taskService: TaskService) {}
 
   public viewDetails() {
-  this.taskService.openTaskDetailsDrawer(this.task);
+    this.taskService.openTaskDetailsDrawer(this.task.id);
   }
 }

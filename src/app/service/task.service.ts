@@ -61,12 +61,16 @@ export class TaskService {
       );
   }
 
+  getTask(id: string) {
+    return this.http.get<Task>(`${ this.baseUrl }/tasks/${ id }`);
+  }
+
   createTask(task: Task) {
-    return this.http.post<Task>(`${this.baseUrl}/tasks/`, task);
+    return this.http.post<Task>(`${ this.baseUrl }/tasks/`, task);
   }
 
   updateTask(task: Task) {
-    return this.http.put<Task>(`${this.baseUrl}/tasks/${task.id}`, task);
+    return this.http.put<Task>(`${ this.baseUrl }/tasks/${ task.id }`, task);
   }
 
   deleteTask(id: string) {
@@ -83,12 +87,12 @@ export class TaskService {
         if (result) {
           this.createTask(result)
             .subscribe((newTask: Task) => {
-              this.taskCreated.next(newTask);
-              this.notificationService.openSuccessNotification('Task successfully created.');
-            },
-            (error) => {
-              this.notificationService.openErrorNotification(`Failed to create task: ${error.message}.`);
-            });
+                this.taskCreated.next(newTask);
+                this.notificationService.openSuccessNotification('Task successfully created.');
+              },
+              (error) => {
+                this.notificationService.openErrorNotification(`Failed to create task: ${ error.message }.`);
+              });
         }
       });
   }
@@ -97,10 +101,10 @@ export class TaskService {
     this.updateTask(task)
       .subscribe(() => {
           this.notificationService.openSuccessNotification('Task successfully updated.');
-      },
-      (error) => {
-        this.notificationService.openErrorNotification(`Failed to update task: ${error.message}.`);
-      });
+        },
+        (error) => {
+          this.notificationService.openErrorNotification(`Failed to update task: ${ error.message }.`);
+        });
   }
 
   initiateDeleteTask(task: Task) {
@@ -110,11 +114,17 @@ export class TaskService {
           this.notificationService.openSuccessNotification('Task successfully deleted.');
         },
         (error) => {
-          this.notificationService.openErrorNotification(`Failed to delete task: ${error.message}.`);
+          this.notificationService.openErrorNotification(`Failed to delete task: ${ error.message }.`);
         });
   }
 
-  openTaskDetailsDrawer(task: Task) {
-    this.openTaskDetails.next(task);
+  openTaskDetailsDrawer(id: string) {
+    this.getTask(id)
+      .subscribe((task: Task) => {
+          this.openTaskDetails.next(task);
+        },
+        (error) => {
+          this.notificationService.openErrorNotification(`Failed to retrieve task: ${ error.message }.`);
+        });
   }
 }

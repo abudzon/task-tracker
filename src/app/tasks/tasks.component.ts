@@ -5,6 +5,7 @@ import { TaskStatus } from '../shared/model/task-status.enum';
 import { TasksResponse } from '../shared/model/tasks-response.interface';
 import { MatDrawer } from '@angular/material';
 import { Subscription } from 'rxjs';
+import { NotificationService } from '../service/notification.service';
 
 @Component({
   selector: 'app-tasks',
@@ -25,7 +26,10 @@ export class TasksComponent implements OnInit, OnDestroy {
 
   public subscriptions: Subscription = new Subscription();
 
-  constructor(private taskService: TaskService) {}
+  public loading = true;
+
+  constructor(private taskService: TaskService,
+              private notificationService: NotificationService) {}
 
   public ngOnInit(): void {
     this.loadTasks();
@@ -36,6 +40,20 @@ export class TasksComponent implements OnInit, OnDestroy {
 
   public updateTaskStatus(task: Task): void {
     this.taskService.initiateUpdateTask(task);
+  }
+
+  private loadTasks(): void {
+    const getTasksSub = this.taskService.getGroupedTasks()
+      .subscribe((taskGroups: TasksResponse) => {
+        this.setCategorisedTasks(taskGroups);
+        this.loading = false;
+      }, (error) => {
+        this.loading = false;
+        this.notificationService.openErrorNotification(
+          `Failed to retrieve tasks: ${ error.message }.`
+        );
+      });
+    this.subscriptions.add(getTasksSub);
   }
 
   private listenOnTaskCreated() {
@@ -68,14 +86,6 @@ export class TasksComponent implements OnInit, OnDestroy {
         }
       });
     this.subscriptions.add(viewDetails);
-  }
-
-  private loadTasks(): void {
-    const getTasksSub = this.taskService.getGroupedTasks()
-      .subscribe((taskGroups: TasksResponse) => {
-        this.setCategorisedTasks(taskGroups);
-      });
-    this.subscriptions.add(getTasksSub);
   }
 
   private setCategorisedTasks(tasksGroup: TasksResponse): void {

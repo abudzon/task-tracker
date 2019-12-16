@@ -30,4 +30,4 @@ import { MAT_DATE_LOCALE } from '@angular/material';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

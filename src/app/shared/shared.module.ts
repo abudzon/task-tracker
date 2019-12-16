@@ -4,8 +4,6 @@ import { StatusPipe } from './pipe/status.pipe';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { MaterialModule } from '../material/material.module';
 
-
-
 @NgModule({
   declarations: [
     StatusPipe,
@@ -23,4 +21,4 @@ import { MaterialModule } from '../material/material.module';
     ConfirmationDialogComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule {}

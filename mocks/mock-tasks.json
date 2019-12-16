@@ -54,7 +54,7 @@
       "title": "New task with due date",
       "creationDate": "2019-12-16T09:55:12.744Z",
       "description": "New task with due date and a little bit long text. But probably not that long. Just long enough.",
-      "status": "inprogress",
+      "status": "done",
       "dueDate": "2019-12-30T23:00:00.000Z"
     }
   ]

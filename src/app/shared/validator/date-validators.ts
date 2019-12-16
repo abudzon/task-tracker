@@ -1,7 +1,7 @@
 import { AbstractControl } from '@angular/forms';
 
 export class DateValidators {
-  static dueDate(control: AbstractControl): {[key: string]: any} | null {
+  static dueDate(control: AbstractControl): { [key: string]: any } | null {
     if (!control || !control.value) {
       return null;
     }

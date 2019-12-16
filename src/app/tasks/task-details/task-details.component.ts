@@ -7,7 +7,7 @@ import { ConfirmationDialogComponent } from '../../shared/confirmation-dialog/co
 @Component({
   selector: 'app-task-details',
   templateUrl: './task-details.component.html',
-  styleUrls: ['./task-details.component.scss']
+  styleUrls: [ './task-details.component.scss' ]
 })
 export class TaskDetailsComponent {
 
@@ -27,7 +27,7 @@ export class TaskDetailsComponent {
       width: '600px',
       data: {
         title: 'Are you sure you want to delete this task?',
-        message: `Task title: '${this.task.title}'`
+        message: `Task title: '${ this.task.title }'`
       }
     });
 
