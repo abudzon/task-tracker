@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 import { from, Observable, Subject } from 'rxjs';
 import { concatMap, groupBy, map, mergeMap, toArray } from 'rxjs/operators';
 import { TasksResponse } from '../shared/model/tasks-response.interface';
-import { TaskCreateComponent } from '../tasks/task-create/task-create.component';
+import { TaskFormComponent } from '../tasks/task-form/task-form.component';
 import { MatDialog } from '@angular/material';
 import { NotificationService } from './notification.service';
 
@@ -36,7 +36,7 @@ export class TaskService {
     return this.http.get<Array<Task>>(`${ this.baseUrl }/tasks`);
   }
 
-  groupTasks(tasks: Array<Task>): Observable<TasksResponse> {
+  private groupTasks(tasks: Array<Task>): Observable<TasksResponse> {
     return from(tasks)
       .pipe(
         groupBy(task => task.status),
@@ -78,7 +78,7 @@ export class TaskService {
   }
 
   initiateCreateTask() {
-    const dialogRef = this.dialog.open(TaskCreateComponent, {
+    const dialogRef = this.dialog.open(TaskFormComponent, {
       width: '800px'
     });
 

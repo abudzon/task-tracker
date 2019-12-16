@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TasksBoardComponent } from './tasks-board/tasks-board.component';
 import { TaskCardComponent } from './task-card/task-card.component';
-import { TaskCreateComponent } from './task-create/task-create.component';
+import { TaskFormComponent } from './task-form/task-form.component';
 import { TasksComponent } from './tasks.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 const components = [
   TasksBoardComponent,
   TaskCardComponent,
-  TaskCreateComponent,
+  TaskFormComponent,
   TasksComponent,
   TaskDetailsComponent
 ];
@@ -33,7 +33,7 @@ const components = [
     ...components
   ],
   entryComponents: [
-    TaskCreateComponent
+    TaskFormComponent
   ]
 })
 export class TasksModule { }

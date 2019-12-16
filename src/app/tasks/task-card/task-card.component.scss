@@ -10,15 +10,18 @@
   margin-bottom: 4px;
   height: 210px;
   max-height: 210px;
-  min-width: 524px;
+  min-width: 364px;
 
-  .mat-card-header {
+  .task-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 16px;
 
-    .mat-card-header-text {
+    .task-header-text {
       overflow: hidden;
+      display: grid;
     }
   }
 
@@ -26,15 +29,15 @@
     width: 20px;
     height: 20px;
     line-height: 20px;
-    margin-right: 16px;
+    margin: 3px 16px;
   }
 
   .task-title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    min-width: 300px;
-    max-width: 480px;
+    //min-width: 300px;
+    //max-width: 480px;
   }
 
   .task-date {

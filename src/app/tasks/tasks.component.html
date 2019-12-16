@@ -3,7 +3,9 @@
               mode="side">
     <app-task-details *ngIf="drawerTask"
                       [task]="drawerTask"
-                      [drawer]="drawer">
+                      [drawer]="drawer"
+                      (taskToUpdate)="updateTask($event)"
+                      (taskToDelete)="deleteTask($event)">
     </app-task-details>
   </mat-drawer>
 

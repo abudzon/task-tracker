@@ -39,7 +39,22 @@ export class TasksComponent implements OnInit, OnDestroy {
   }
 
   public updateTaskStatus(task: Task): void {
+    this.taskDrawer.close();
     this.taskService.initiateUpdateTask(task);
+  }
+
+  public updateTask(task: Task): void {
+    this.taskService.initiateUpdateTask(task);
+    const tasksOfSameStatus = this.getTasksOfSameStatus(task.status);
+    const taskToUpdate = tasksOfSameStatus.findIndex((item: Task) => item.id === task.id);
+
+    if (taskToUpdate) {
+      tasksOfSameStatus.splice(taskToUpdate, 1, task);
+    }
+  }
+
+  public deleteTask(task: Task): void {
+    this.taskService.initiateDeleteTask(task);
   }
 
   private loadTasks(): void {
@@ -68,8 +83,7 @@ export class TasksComponent implements OnInit, OnDestroy {
   private listenOnTaskDeleted(): void {
     const deletedSub = this.taskService.deletedTask$
       .subscribe((task: Task) => {
-        const tasksOfSameStatus = task.status === TaskStatus.TO_DO ? this.toDo :
-          (task.status === TaskStatus.IN_PROGRESS ? this.inProgress : this.done);
+        const tasksOfSameStatus = this.getTasksOfSameStatus(task.status);
         const taskToDelete = tasksOfSameStatus.findIndex((item: Task) => item.id === task.id);
 
         if (taskToDelete) {
@@ -110,6 +124,11 @@ export class TasksComponent implements OnInit, OnDestroy {
           ...tasksGroup.tasks
         ];
     }
+  }
+
+  private getTasksOfSameStatus(status: string): Array<Task> {
+    return status === TaskStatus.TO_DO ? this.toDo :
+      (status === TaskStatus.IN_PROGRESS ? this.inProgress : this.done);
   }
 
   public ngOnDestroy(): void {

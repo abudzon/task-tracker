@@ -1,18 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskCreateComponent } from './task-create.component';
+import { TaskFormComponent } from './task-form.component';
 import { MaterialModule } from '../../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('TaskCreateComponent', () => {
-  let component: TaskCreateComponent;
-  let fixture: ComponentFixture<TaskCreateComponent>;
+describe('TaskFormComponent', () => {
+  let component: TaskFormComponent;
+  let fixture: ComponentFixture<TaskFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TaskCreateComponent ],
+      declarations: [ TaskFormComponent ],
       imports: [
         MaterialModule,
         ReactiveFormsModule,
@@ -20,13 +20,14 @@ describe('TaskCreateComponent', () => {
       ],
       providers: [
         { provide: MatDialogRef, useValue: {} },
+        { provide: MAT_DIALOG_DATA, useValue: {} },
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TaskCreateComponent);
+    fixture = TestBed.createComponent(TaskFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

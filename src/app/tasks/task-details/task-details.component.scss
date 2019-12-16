@@ -86,9 +86,13 @@
     }
   }
 
-  .task-delete {
+  .task-actions {
     display: flex;
     justify-content: flex-end;
     margin-top: 24px;
+
+    :first-child {
+      margin-right: 8px;
+    }
   }
 }

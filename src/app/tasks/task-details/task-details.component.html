@@ -34,9 +34,12 @@
       {{ task.description }}
     </p>
   </div>
-  <div class="task-delete">
-    <button mat-button
-            mat-raised-button
+  <div class="task-actions">
+    <button mat-raised-button
+            (click)="editTask()">
+     Edit
+    </button>
+    <button mat-raised-button
             color="warn"
             (click)="deleteTask()">
       Delete

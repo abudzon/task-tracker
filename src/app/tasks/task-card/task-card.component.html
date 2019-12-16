@@ -1,18 +1,20 @@
 <mat-card class="task-container">
-  <mat-card-header>
-    <mat-card-title class="task-title">
-      {{ task?.title }}
-    </mat-card-title>
-    <mat-card-subtitle class="task-date">
-      {{ task?.creationDate | date:'MMMM d, y, h:mm a' }}
-    </mat-card-subtitle>
+  <div class="task-header">
+    <div class="task-header-text">
+      <mat-card-title class="task-title">
+        {{ task?.title }}
+      </mat-card-title>
+      <mat-card-subtitle class="task-date">
+        {{ task?.creationDate | date:'MMMM d, y, h:mm a' }}
+      </mat-card-subtitle>
+    </div>
     <button mat-icon-button
             aria-label="View details..."
             class="task-view-more"
             (click)="viewDetails()">
       <mat-icon>open_in_new</mat-icon>
     </button>
-  </mat-card-header>
+  </div>
   <mat-card-content>
     <p class="task-description">
       {{ task?.description }}

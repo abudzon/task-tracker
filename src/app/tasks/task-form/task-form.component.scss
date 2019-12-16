@@ -1,5 +1,5 @@
-.task-create-container {
-  .task-create-form {
+.task-form-container {
+  .task-form {
     display: flex;
     flex-direction: column;
   }
@@ -9,7 +9,7 @@
     min-height: 60px;
   }
 
-  .task-create-action-buttons {
+  .task-form-action-buttons {
     justify-content: flex-end;
     margin-bottom: 1px;
     padding: 0;

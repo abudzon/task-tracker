@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AppRoutingModule } from './routing/app-routing.module';
-import { SharedModule } from './shared/shared.module';
 import { MAT_DATE_LOCALE } from '@angular/material';
 
 @NgModule({

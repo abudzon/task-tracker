@@ -48,7 +48,7 @@ export class TasksBoardComponent {
     this.doneTasksChange.emit(this.doneTasks);
   }
 
-  private updateStatus(statusId: string, taskId: string) {
+  private updateStatus(statusId: string, taskId: string): void {
     const updatedTask = this.getUpdatedTask(
       statusId,
       taskId

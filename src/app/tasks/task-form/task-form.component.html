@@ -1,8 +1,8 @@
-<div class="task-create-container">
-  <h1 mat-dialog-title>Create new task</h1>
+<div class="task-form-container">
+  <h1 mat-dialog-title>{{ !data ? 'Create new' : 'Update' }} task</h1>
   <div mat-dialog-content>
     <form [formGroup]="tasksFormGroup"
-          class="task-create-form">
+          class="task-form">
       <mat-form-field color="accent"
                       appearance="outline">
         <mat-label>Title</mat-label>
@@ -59,7 +59,7 @@
     </form>
   </div>
 
-  <div class="task-create-action-buttons"
+  <div class="task-form-action-buttons"
        mat-dialog-actions>
     <button mat-button
             mat-raised-button
