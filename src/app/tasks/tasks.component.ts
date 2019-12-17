@@ -63,6 +63,7 @@ export class TasksComponent implements OnInit, OnDestroy {
       .subscribe((taskGroups: TasksResponse) => {
         this.setCategorisedTasks(taskGroups);
       }, (error) => {
+        this.loading = false;
         this.notificationService.openErrorNotification(
           `Failed to retrieve tasks: ${ error.message }.`
         );
