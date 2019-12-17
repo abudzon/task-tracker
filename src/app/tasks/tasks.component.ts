@@ -24,9 +24,9 @@ export class TasksComponent implements OnInit, OnDestroy {
 
   public drawerTask: Task | undefined;
 
-  public subscriptions: Subscription = new Subscription();
-
   public loading = true;
+
+  private subscriptions: Subscription = new Subscription();
 
   constructor(private taskService: TaskService,
               private notificationService: NotificationService) {}
@@ -46,7 +46,8 @@ export class TasksComponent implements OnInit, OnDestroy {
   public updateTask(task: Task): void {
     this.taskService.initiateUpdateTask(task);
     const tasksOfSameStatus = this.getTasksOfSameStatus(task.status);
-    const taskToUpdate = tasksOfSameStatus.findIndex((item: Task) => item.id === task.id);
+    const taskToUpdate = tasksOfSameStatus
+      .findIndex((item: Task) => item.id === task.id);
 
     if (taskToUpdate) {
       tasksOfSameStatus.splice(taskToUpdate, 1, task);
@@ -84,7 +85,8 @@ export class TasksComponent implements OnInit, OnDestroy {
     const deletedSub = this.taskService.deletedTask$
       .subscribe((task: Task) => {
         const tasksOfSameStatus = this.getTasksOfSameStatus(task.status);
-        const taskToDelete = tasksOfSameStatus.findIndex((item: Task) => item.id === task.id);
+        const taskToDelete = tasksOfSameStatus
+          .findIndex((item: Task) => item.id === task.id);
 
         if (taskToDelete) {
           tasksOfSameStatus.splice(taskToDelete, 1);

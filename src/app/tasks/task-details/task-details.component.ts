@@ -35,7 +35,6 @@ export class TaskDetailsComponent {
     dialogRef.afterClosed()
       .subscribe((result: Task | undefined) => {
         if (result) {
-          console.log(result);
           this.task = result;
           this.taskToUpdate.emit(this.task);
         }

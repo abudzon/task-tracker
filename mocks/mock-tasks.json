@@ -5,14 +5,14 @@
       "title": "Very long long long long long long long long long task title",
       "creationDate": "2017-10-06T10:50:32.870Z",
       "description": "Curabitur sit amet leo at purus fringilla fermentum in maximus lectus. Maecenas vel justo metus. Ut condimentum eros sapien, placerat mollis lectus consequat ut.",
-      "status": "done"
+      "status": "inprogress"
     },
     {
       "id": "bfc2d78c-eabc-44d2-89fa-8ae039dd136e",
       "title": "New task 1",
       "creationDate": "2019-12-16T15:11:32.870Z",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tortor risus, eleifend id lobortis ut, mattis quis lectus. Etiam vulputate lacus venenatis, tincidunt odio ac, convallis odio. Donec rhoncus consectetur ipsum, vel tincidunt sem consectetur et.",
-      "status": "todo",
+      "status": "inprogress",
       "dueDate": "2019-12-21T23:00:00.000Z"
     },
     {
@@ -20,15 +20,15 @@
       "title": "New task 2",
       "creationDate": "2019-12-16T15:56:03.814Z",
       "description": "Fusce porta ante eu gravida accumsan. Duis rhoncus libero vitae sem volutpat, ac euismod erat luctus. Nullam ac bibendum justo. Phasellus porta dolor lectus, vitae facilisis quam pellentesque non.",
-      "status": "inprogress",
-      "dueDate": "2019-12-30T23:00:00.000Z"
+      "status": "done",
+      "dueDate": "2019-12-31T23:00:00.000Z"
     },
     {
       "id": "5eb51ae8-29fb-4876-b269-9e545bf7e010",
       "title": "New task 3",
       "creationDate": "2019-12-16T18:56:31.517Z",
       "description": "Proin elit sem, accumsan vel semper a, pharetra quis eros. Praesent vel vestibulum lectus. Fusce venenatis elementum ante. Praesent posuere purus aliquam, fringilla tortor eget, mattis massa. Aliquam luctus justo est, sed tempor ipsum sodales ac.",
-      "status": "inprogress",
+      "status": "done",
       "dueDate": "2020-02-28T23:00:00.000Z"
     },
     {
@@ -37,7 +37,7 @@
       "creationDate": "2019-12-15T10:56:53.789Z",
       "description": "Suspendisse et arcu non mi blandit scelerisque. Donec tristique sodales est et feugiat. Phasellus faucibus eros enim, eu varius nibh elementum tempor. Pellentesque et ullamcorper libero. Nullam vel massa in arcu imperdiet elementum. Quisque consequat vitae velit ac scelerisque.",
       "status": "todo",
-      "dueDate": "2063-12-31T23:00:00.000Z"
+      "dueDate": "2039-02-07T23:00:00.000Z"
     },
     {
       "id": "6ee209cc-e5e4-488a-aefc-95e7eae5114c",
