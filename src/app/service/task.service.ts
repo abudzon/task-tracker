@@ -28,12 +28,14 @@ export class TaskService {
 
   private baseUrl = environment.BASE_URL;
 
+  private tasksUrl = `${this.baseUrl}/tasks`;
+
   constructor(private http: HttpClient,
               private dialog: MatDialog,
               private notificationService: NotificationService) {}
 
   getAllTasks(): Observable<Array<Task>> {
-    return this.http.get<Array<Task>>(`${ this.baseUrl }/tasks`);
+    return this.http.get<Array<Task>>(this.tasksUrl);
   }
 
   private groupTasks(tasks: Array<Task>): Observable<TasksResponse> {
@@ -62,19 +64,19 @@ export class TaskService {
   }
 
   getTask(id: string) {
-    return this.http.get<Task>(`${ this.baseUrl }/tasks/${ id }`);
+    return this.http.get<Task>(`${ this.tasksUrl }/${ id }`);
   }
 
   createTask(task: Task) {
-    return this.http.post<Task>(`${ this.baseUrl }/tasks/`, task);
+    return this.http.post<Task>(`${ this.tasksUrl }/`, task);
   }
 
   updateTask(task: Task) {
-    return this.http.put<Task>(`${ this.baseUrl }/tasks/${ task.id }`, task);
+    return this.http.put<Task>(`${ this.tasksUrl }/${ task.id }`, task);
   }
 
   deleteTask(id: string) {
-    return this.http.delete<Task>(`${ this.baseUrl }/tasks/${ id }`);
+    return this.http.delete<Task>(`${ this.tasksUrl }/${ id }`);
   }
 
   initiateCreateTask() {
